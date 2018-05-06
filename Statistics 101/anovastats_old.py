@@ -225,27 +225,3 @@ class Anova:
             plt.ylabel("Estimated Marginal Means")
             plt.show()
         return r_df
-	
-	
-class Stats:
-
-    def __init__(self, df):
-        self.df = df
-        self.col = df.shape[1]
-        self.row = df.shape[0]
-		self.x_mean = df.iloc[:,0].mean()
-		self.y_mean = df.iloc[:,1].mean()
-		
-	def residuals(self):
-		plt.scatter(self.df.iloc[:,1])
-		plt.ylabel(self.df.index[1])
-		plt.ylim(0,max(self.df.iloc[:,1])
-		plt.axhline(y=self.y_mean, color='r', linestyle='--')
-		for i in range(0,self.row):
-    		normalized = df.iloc[i, 1]/(max(self.df.iloc[:,1])-0)
-    		distance = df.iloc[i, 2] - self.y_mean
-    		plt.axvline(i+1,.5,normalized)
-    		plt.text(i+1.2,df.iloc[i, 1],distance)
-
-        
-
